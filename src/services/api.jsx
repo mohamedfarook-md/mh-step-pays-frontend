@@ -51,6 +51,16 @@ export const getMerchantDocuments = (merchantId) => API.get(`/admin/merchants/${
 export const verifyDocuments = (merchantId, data) => API.put(`/admin/merchants/${merchantId}/documents/verify`, data);
 export const getAuditLogs = (params) => API.get('/admin/audit-logs', { params });
 export const getReports = (type, params) => API.get(`/reports/${type}`, { params });
+// Invoice
+export const uploadInvoice = (formData) =>
+  API.post('/admin/invoices/upload', formData, {
+    headers: {
+      'Content-Type': 'multipart/form-data'
+    }
+  });
+
+export const getInvoices = () =>
+  API.get('/admin/invoices');
 
 // Agent
 export const createMerchant = (data) => API.post('/merchants', data);
@@ -69,5 +79,6 @@ export const markAllRead = () => API.put('/notifications/read-all');
 // Attendance
 export const getMyAttendance = () => API.get('/attendance/my');
 export const getCommissions = () => API.get('/commissions/my');
+export const getMyInvoices = () => API.get('/agents/invoices');
 
 export default API;

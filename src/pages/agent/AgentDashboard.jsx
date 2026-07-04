@@ -193,7 +193,8 @@ export default function AgentDashboard() {
             <StatCard icon="✅" label="Approved"            value={s.approved}          color="#10b981" />
             <StatCard icon="🟢" label="Active"              value={s.active}            color="#059669" to="/agent/merchants?status=active" />
             <StatCard icon="❌" label="Rejected"            value={s.rejected}          color="#ef4444" to="/agent/merchants?status=rejected" />
-            <StatCard icon="💰" label="Commission Eligible" value={s.commissionEligible} color="#ec4899" to="/agent/merchants?status=commission_eligible" />
+            {/* <StatCard icon="💰" label="Commission Eligible" value={s.commissionEligible} color="#ec4899" to="/agent/merchants?status=commission_eligible" /> */}
+            <StatCard icon="📄" label="Invoices"            value="-"                   color="#6366f1" to="/agent/invoices" />
           </div>
 
           {/* Bottom two-panel */}
@@ -258,6 +259,13 @@ export default function AgentDashboard() {
                 <Link to="/agent/profile" className="btn btn-outline" style={{ justifyContent: 'center' }}>
                   👤 My Profile
                 </Link>
+                <Link
+to="/agent/invoices"
+className="btn btn-outline"
+style={{ justifyContent: 'center' }}
+>
+📄 View Monthly Invoices
+</Link>
               </div>
             </div>
 

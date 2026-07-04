@@ -17,6 +17,7 @@ import MerchantDetail from '../src/pages/admin/MerchantDetail';
 import QRManagement from '../src/pages/admin/QRManagement';
 import AuditLogs from '../src/pages/admin/AuditLogs';
 import Reports from '../src/pages/admin/Reports';
+import InvoiceManagement from './pages/admin/InvoiceManagement';
 
 // Agent Pages
 import AgentDashboard from '../src/pages/agent/AgentDashboard';
@@ -24,6 +25,7 @@ import AddMerchant from '../src/pages/agent/AddMerchant';
 import MyMerchants from '../src/pages/agent/MyMerchants';
 import MerchantView from '../src/pages/agent/MerchantView';
 import AgentProfile from '../src/pages/agent/AgentProfile';
+import Invoices from '../src/pages/agent/Invoices';
 
 // Common
 import NotificationsPage from '../src/pages/common/NotificationsPage';
@@ -99,6 +101,14 @@ function App() {
           <Route path="/admin/audit-logs" element={<ProtectedRoute role="admin"><AuditLogs /></ProtectedRoute>} />
           <Route path="/admin/reports" element={<ProtectedRoute role="admin"><Reports /></ProtectedRoute>} />
           <Route path="/admin/notifications" element={<ProtectedRoute role="admin"><NotificationsPage /></ProtectedRoute>} />
+          <Route
+  path="/admin/invoices"
+  element={
+    <ProtectedRoute role="admin">
+      <InvoiceManagement />
+    </ProtectedRoute>
+  }
+/>
 
           {/* Agent Routes */}
           <Route path="/agent/dashboard" element={<ProtectedRoute role="agent"><AgentDashboard /></ProtectedRoute>} />
@@ -106,6 +116,14 @@ function App() {
           <Route path="/agent/merchants" element={<ProtectedRoute role="agent"><MyMerchants /></ProtectedRoute>} />
           <Route path="/agent/merchants/:id" element={<ProtectedRoute role="agent"><MerchantView /></ProtectedRoute>} />
           <Route path="/agent/profile" element={<ProtectedRoute role="agent"><AgentProfile /></ProtectedRoute>} />
+          <Route
+  path="/agent/invoices"
+  element={
+    <ProtectedRoute role="agent">
+      <Invoices />
+    </ProtectedRoute>
+  }
+/>
           <Route path="/agent/notifications" element={<ProtectedRoute role="agent"><NotificationsPage /></ProtectedRoute>} />
         </Routes>
       </Router>

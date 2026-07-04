@@ -580,9 +580,7 @@ import { getMerchant } from '../../services/api';
 import toast from 'react-hot-toast';
 
 const STATUS_STEPS = [
-  'draft','submitted','under_review','approved',
-  'qr_uploaded','qr_deployed','transaction_verified',
-  '7_day_validation','active','commission_eligible'
+  'draft','submitted','under_review','approved'
 ];
 
 const InfoRow = ({ label, value }) => (

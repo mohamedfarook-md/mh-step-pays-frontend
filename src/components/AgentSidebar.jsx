@@ -65,6 +65,7 @@ const navItems = [
   { to: '/agent/dashboard', label: 'Dashboard',     icon: 'M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z' },
   { to: '/agent/add-merchant', label: 'Add Merchant', icon: 'M12 5v14M5 12h14' },
   { to: '/agent/merchants', label: 'My Merchants',  icon: 'M3 9a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9z M3 9l9 6 9-6' },
+  { to: '/agent/invoices', label: 'Invoices', icon: 'M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zM14 2v6h6' },
   { to: '/agent/notifications', label: 'Notifications', icon: 'M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 0 1-3.46 0' },
   { to: '/agent/profile', label: 'My Profile',     icon: 'M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z' },
 ];
