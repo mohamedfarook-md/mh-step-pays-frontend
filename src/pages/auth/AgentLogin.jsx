@@ -28,7 +28,7 @@ export default function AgentLogin() {
       <div className="auth-card">
         <div className="auth-logo">
           <h1>MH Step Pays</h1>
-          <p>Field Agent Portal — Sign in</p>
+          <p>PARTNER PORTAL — Sign in</p>
         </div>
         <form onSubmit={handleSubmit}>
           <div className="form-group">

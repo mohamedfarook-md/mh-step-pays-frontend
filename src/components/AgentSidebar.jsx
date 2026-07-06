@@ -123,7 +123,7 @@ export default function AgentSidebar() {
       <aside className={`sidebar${open ? ' open' : ''}`}>
         <div className="sidebar-logo">
           <h1>MH Step Pays</h1>
-          <span>Field Agent</span>
+          <span>PARTNER</span>
         </div>
 
         <nav className="sidebar-nav">

@@ -693,7 +693,7 @@ export default function AgentProfile() {
             {[
               { icon: '📅', label: 'Sessions',    value: attendance.length },
               { icon: '⏱️', label: 'Total Hours', value: fmtDuration(totalMins) },
-              { icon: '💰', label: 'Commissions', value: commissions.length },
+              // { icon: '💰', label: 'Commissions', value: commissions.length },
               { icon: '📊', label: 'Avg Session', value: attendance.length ? fmtDuration(Math.round(totalMins / attendance.length)) : '—' },
             ].map(s => (
               <div key={s.label} className="stat-card" style={{ padding: '14px 12px', textAlign: 'center' }}>
@@ -709,7 +709,7 @@ export default function AgentProfile() {
             {[
               { id: 'profile',     label: '👤 Profile' },
               { id: 'attendance',  label: '📋 Attendance' },
-              { id: 'commissions', label: '💰 Commissions' },
+              // { id: 'commissions', label: '💰 Commissions' },
             ].map(t => (
               <button
                 key={t.id}
@@ -784,7 +784,7 @@ export default function AgentProfile() {
           )}
 
           {/* Commissions */}
-          {activeTab === 'commissions' && (
+          {/* {activeTab === 'commissions' && (
             <div className="card" style={{ padding: 0 }}>
               <div style={{ padding: '16px 20px', borderBottom: '1px solid var(--border)' }}>
                 <h3 style={{ fontSize: '0.82rem', fontWeight: 700, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.8px', margin: 0 }}>Commission Records</h3>
@@ -830,7 +830,7 @@ export default function AgentProfile() {
                 </div>
               )}
             </div>
-          )}
+          )} */}
 
         </div>
       </div>
