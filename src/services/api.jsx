@@ -81,4 +81,21 @@ export const getMyAttendance = () => API.get('/attendance/my');
 export const getCommissions = () => API.get('/commissions/my');
 export const getMyInvoices = () => API.get('/agents/invoices');
 
+
+
+// Soundbox
+export const getSoundboxes = () => API.get('/soundboxes');
+
+export const createSoundbox = (data) =>
+  API.post('/soundboxes', data);
+
+export const updateSoundbox = (id, data) =>
+  API.put(`/soundboxes/${id}`, data);
+
+export const deleteSoundbox = (id) =>
+  API.delete(`/soundboxes/${id}`);
+
+export const activateSoundbox = (id) =>
+  API.put(`/soundboxes/${id}/activate`);
+
 export default API;

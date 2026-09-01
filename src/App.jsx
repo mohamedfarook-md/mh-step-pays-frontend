@@ -18,6 +18,11 @@ import QRManagement from '../src/pages/admin/QRManagement';
 import AuditLogs from '../src/pages/admin/AuditLogs';
 import Reports from '../src/pages/admin/Reports';
 import InvoiceManagement from './pages/admin/InvoiceManagement';
+import Soundboxes from './pages/admin/Soundboxes';
+import PendingApplications from './pages/admin/merchant-review/PendingApplications';
+import MerchantReview from './pages/admin/merchant-review/MerchantReview';
+import MerchantKYC from './pages/admin/merchant-review/MerchantKYC';
+import MerchantDocuments from './pages/admin/merchant-review/MerchantDocuments';
 
 // Agent Pages
 import AgentDashboard from '../src/pages/agent/AgentDashboard';
@@ -26,7 +31,19 @@ import MyMerchants from '../src/pages/agent/MyMerchants';
 import MerchantView from '../src/pages/agent/MerchantView';
 import AgentProfile from '../src/pages/agent/AgentProfile';
 import Invoices from '../src/pages/agent/Invoices';
-
+import CreateMerchant from '../src/pages/agent/onboarding/steps/CreateMerchant';
+import PanDob from '../src/pages/agent/onboarding/steps/PanDob';
+import CKYC from '../src/pages/agent/onboarding/steps/CKYC';
+import BankDetails from '../src/pages/agent/onboarding/steps/BankDetails';
+import BusinessDetails from '../src/pages/agent/onboarding/steps/BusinessDetails';
+import WebsiteDetails from '../src/pages/agent/onboarding/steps/WebsiteDetails';
+import SigningAuthority from '../src/pages/agent/onboarding/steps/SigningAuthority';
+import DigiLocker from '../src/pages/agent/onboarding/steps/DigiLocker';
+import UBODetails from '../src/pages/agent/onboarding/steps/UBODetails';
+import Documents from '../src/pages/agent/onboarding/steps/Documents';
+import ShopVerification from '../src/pages/agent/onboarding/steps/ShopVerification';
+import VKYC from '../src/pages/agent/onboarding/steps/VKYC';
+import Agreement from "../src/pages/agent/onboarding/steps/Agreement";
 // Common
 import NotificationsPage from '../src/pages/common/NotificationsPage';
 
@@ -110,9 +127,156 @@ function App() {
   }
 />
 
+        <Route
+  path="/admin/soundboxes"
+  element={
+    <ProtectedRoute role="admin">
+      <Soundboxes />
+    </ProtectedRoute>
+  }
+/>
+
+
+
           {/* Agent Routes */}
           <Route path="/agent/dashboard" element={<ProtectedRoute role="agent"><AgentDashboard /></ProtectedRoute>} />
           <Route path="/agent/add-merchant" element={<ProtectedRoute role="agent"><AddMerchant /></ProtectedRoute>} />
+          <Route
+  path="/agent/create-merchant"
+  element={
+    <ProtectedRoute role="agent">
+      <CreateMerchant />
+    </ProtectedRoute>
+  }
+/>
+<Route
+  path="/agent/merchant/:id/pan"
+  element={
+    <ProtectedRoute role="agent">
+      <PanDob />
+    </ProtectedRoute>
+  }
+/>
+<Route
+  path="/agent/merchant/:id/ckyc"
+  element={
+    <ProtectedRoute role="agent">
+      <CKYC />
+    </ProtectedRoute>
+  }
+/>
+<Route
+  path="/agent/merchant/:id/bank"
+  element={
+    <ProtectedRoute role="agent">
+      <BankDetails />
+    </ProtectedRoute>
+  }
+/>
+<Route
+  path="/agent/merchant/:id/business"
+  element={
+    <ProtectedRoute role="agent">
+      <BusinessDetails />
+    </ProtectedRoute>
+  }
+/>
+<Route
+  path="/agent/merchant/:id/website"
+  element={
+    <ProtectedRoute role="agent">
+      <WebsiteDetails />
+    </ProtectedRoute>
+  }
+/>
+<Route
+  path="/agent/merchant/:id/signing-authority"
+  element={
+    <ProtectedRoute role="agent">
+      <SigningAuthority />
+    </ProtectedRoute>
+  }
+/>
+<Route
+  path="/agent/merchant/:id/digilocker"
+  element={
+    <ProtectedRoute role="agent">
+      <DigiLocker />
+    </ProtectedRoute>
+  }
+/>
+<Route
+  path="/agent/merchant/:id/ubo"
+  element={
+    <ProtectedRoute role="agent">
+      <UBODetails />
+    </ProtectedRoute>
+  }
+/>
+<Route
+  path="/agent/merchant/:id/documents"
+  element={
+    <ProtectedRoute role="agent">
+      <Documents />
+    </ProtectedRoute>
+  }
+/>
+
+<Route
+  path="/agent/merchant/:id/vkyc"
+  element={
+    <ProtectedRoute role="agent">
+      <VKYC />
+    </ProtectedRoute>
+  }
+/>
+<Route
+  path="/admin/merchant-review"
+  element={
+    <ProtectedRoute role="admin">
+      <PendingApplications />
+    </ProtectedRoute>
+  }
+/>
+<Route
+  path="/admin/merchant-review/:id"
+  element={
+    <ProtectedRoute role="admin">
+      <MerchantReview />
+    </ProtectedRoute>
+  }
+/>
+<Route
+  path="/admin/merchant-review/:id/kyc"
+  element={
+    <ProtectedRoute role="admin">
+      <MerchantKYC />
+    </ProtectedRoute>
+  }
+/>
+
+<Route
+  path="/agent/merchant/:id/shop-verification"
+  element={
+    <ProtectedRoute role="agent">
+      <ShopVerification />
+    </ProtectedRoute>
+  }
+/>
+
+
+<Route
+  path="/admin/merchant-review/:id/documents"
+  element={
+    <ProtectedRoute role="admin">
+      <MerchantDocuments />
+    </ProtectedRoute>
+  }
+/>
+<Route
+  path="/agent/merchant/:merchantId/agreement"
+  element={<Agreement />}
+/>
           <Route path="/agent/merchants" element={<ProtectedRoute role="agent"><MyMerchants /></ProtectedRoute>} />
           <Route path="/agent/merchants/:id" element={<ProtectedRoute role="agent"><MerchantView /></ProtectedRoute>} />
           <Route path="/agent/profile" element={<ProtectedRoute role="agent"><AgentProfile /></ProtectedRoute>} />

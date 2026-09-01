@@ -1,0 +1,509 @@
+/* =========================================================
+   PAN & DOB PAGE
+========================================================= */
+
+.pan-dob-page {
+  min-height: 100vh;
+  background: #f6f8fc;
+  padding: 32px 24px 50px;
+  color: #172033;
+}
+
+.pan-dob-container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.pan-dob-header {
+  margin-bottom: 22px;
+}
+
+.page-step {
+  margin: 0 0 7px;
+  color: #2563eb;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 0.8px;
+}
+
+.pan-dob-header h1 {
+  margin: 0;
+  color: #111827;
+  font-size: 30px;
+  line-height: 1.25;
+  font-weight: 750;
+  letter-spacing: -0.5px;
+}
+
+.pan-dob-header p:last-child {
+  margin: 7px 0 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   PROGRESS
+========================================================= */
+
+.pan-progress-card {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 16px 20px;
+  margin-bottom: 20px;
+  background: #ffffff;
+  border: 1px solid #e5e9f0;
+  border-radius: 15px;
+  box-shadow: 0 3px 13px rgba(15, 23, 42, 0.04);
+}
+
+.pan-progress-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 150px;
+}
+
+.progress-circle {
+  width: 34px;
+  height: 34px;
+  min-width: 34px;
+  border-radius: 50%;
+  background: #f1f4f8;
+  color: #7b8494;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.pan-progress-item.completed .progress-circle {
+  background: #16a34a;
+  color: #ffffff;
+}
+
+.pan-progress-item.active .progress-circle {
+  background: #2563eb;
+  color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+.pan-progress-item strong {
+  display: block;
+  color: #374151;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.pan-progress-item span {
+  display: block;
+  margin-top: 2px;
+  color: #9299a6;
+  font-size: 11px;
+}
+
+.pan-progress-item.active strong {
+  color: #2563eb;
+}
+
+.progress-line {
+  flex: 1;
+  height: 1px;
+  margin: 0 14px;
+  background: #e2e6ed;
+}
+
+.progress-line.active {
+  background: #93b4f8;
+}
+
+
+/* =========================================================
+   ALERT
+========================================================= */
+
+.pan-alert {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 15px;
+  margin-bottom: 18px;
+  border: 1px solid #fecaca;
+  border-radius: 10px;
+  background: #fff5f5;
+  color: #b91c1c;
+  font-size: 13px;
+}
+
+.alert-icon {
+  width: 21px;
+  height: 21px;
+  min-width: 21px;
+  border-radius: 50%;
+  background: #dc2626;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.pan-section {
+  padding: 25px;
+  margin-bottom: 18px;
+  background: #ffffff;
+  border: 1px solid #e5e9f0;
+  border-radius: 16px;
+  box-shadow: 0 3px 14px rgba(15, 23, 42, 0.045);
+}
+
+.section-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.section-icon {
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  border-radius: 10px;
+  background: #eef2f7;
+  color: #374151;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.section-icon.blue {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.section-heading h2 {
+  margin: 0;
+  color: #172033;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.section-heading p {
+  margin: 4px 0 0;
+  color: #7b8494;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   MERCHANT SUMMARY
+========================================================= */
+
+.merchant-summary {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.summary-item {
+  padding: 15px;
+  border: 1px solid #e8ecf2;
+  border-radius: 11px;
+  background: #f9fafc;
+}
+
+.summary-item span {
+  display: block;
+  margin-bottom: 5px;
+  color: #8a93a1;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.summary-item strong {
+  color: #273142;
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.pan-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.pan-form-group label {
+  display: block;
+  margin-bottom: 7px;
+  color: #374151;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.pan-form-group label span {
+  color: #dc2626;
+}
+
+.pan-input {
+  display: block;
+  width: 100%;
+  height: 47px;
+  padding: 0 14px;
+  border: 1px solid #d8dee8;
+  border-radius: 10px;
+  outline: none;
+  background: #ffffff;
+  color: #172033;
+  font-size: 14px;
+  transition:
+    border-color 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.pan-input::placeholder {
+  color: #a1a8b5;
+}
+
+.pan-input:hover {
+  border-color: #b9c3d2;
+}
+
+.pan-input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.09);
+}
+
+.pan-form-group small {
+  display: block;
+  margin-top: 7px;
+  color: #8a93a1;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   INFO CARD
+========================================================= */
+
+.pan-info-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  padding: 15px 17px;
+  margin-bottom: 20px;
+  border: 1px solid #dbeafe;
+  border-radius: 12px;
+  background: #f7faff;
+}
+
+.info-icon {
+  width: 22px;
+  height: 22px;
+  min-width: 22px;
+  border-radius: 50%;
+  background: #2563eb;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.pan-info-card strong {
+  color: #1e3a8a;
+  font-size: 12px;
+}
+
+.pan-info-card p {
+  margin: 3px 0 0;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.pan-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding-bottom: 15px;
+}
+
+.pan-btn {
+  min-height: 46px;
+  padding: 0 20px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 650;
+  cursor: pointer;
+  transition:
+    background 0.18s ease,
+    border-color 0.18s ease,
+    box-shadow 0.18s ease,
+    transform 0.18s ease;
+}
+
+.pan-btn.secondary {
+  border: 1px solid #d7dde7;
+  background: #ffffff;
+  color: #4b5563;
+}
+
+.pan-btn.secondary:hover {
+  background: #f8fafc;
+  border-color: #c7cfdb;
+}
+
+.pan-btn.primary {
+  min-width: 145px;
+  border: 1px solid #2563eb;
+  background: #2563eb;
+  color: #ffffff;
+  box-shadow: 0 5px 12px rgba(37, 99, 235, 0.17);
+}
+
+.pan-btn.primary:hover {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 7px 16px rgba(37, 99, 235, 0.22);
+}
+
+.pan-btn.primary span {
+  margin-left: 7px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .pan-dob-page {
+    padding: 20px 14px 32px;
+  }
+
+  .pan-dob-header h1 {
+    font-size: 25px;
+  }
+
+  .pan-dob-header p:last-child {
+    font-size: 13px;
+  }
+
+  /* Progress */
+
+  .pan-progress-card {
+    padding: 13px;
+    overflow-x: auto;
+  }
+
+  .pan-progress-item {
+    min-width: auto;
+  }
+
+  .pan-progress-item > div:last-child {
+    display: none;
+  }
+
+  .progress-line {
+    min-width: 25px;
+    margin: 0 8px;
+  }
+
+  .progress-circle {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+  }
+
+
+  /* Sections */
+
+  .pan-section {
+    padding: 18px 16px;
+    border-radius: 13px;
+  }
+
+  .merchant-summary,
+  .pan-form-grid {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+
+
+  /* Info */
+
+  .pan-info-card {
+    padding: 14px;
+  }
+
+
+  /* Buttons */
+
+  .pan-actions {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .pan-btn {
+    width: 100%;
+    min-height: 48px;
+  }
+
+  .pan-btn.primary {
+    min-width: 0;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .pan-dob-page {
+    padding-left: 11px;
+    padding-right: 11px;
+  }
+
+  .pan-section {
+    padding: 16px 13px;
+  }
+
+  .pan-dob-header h1 {
+    font-size: 23px;
+  }
+}

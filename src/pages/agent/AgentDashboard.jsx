@@ -178,7 +178,7 @@ export default function AgentDashboard() {
                 Here's your merchant acquisition summary
               </p>
             </div>
-            <Link to="/agent/add-merchant" className="btn btn-primary" style={{
+            <Link to="/agent/create-merchant" className="btn btn-primary" style={{
               background: 'rgba(255,255,255,0.15)', border: '1px solid rgba(255,255,255,0.3)',
               color: '#fff', backdropFilter: 'blur(4px)'
             }}>
@@ -244,7 +244,7 @@ export default function AgentDashboard() {
                 <h3 className="card-title" style={{ marginBottom: 0 }}>Quick Actions</h3>
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-                <Link to="/agent/add-merchant" className="btn btn-primary" style={{ justifyContent: 'center' }}>
+                <Link to="/agent/create-merchant" className="btn btn-primary" style={{ justifyContent: 'center' }}>
                   🏪 Add New Merchant
                 </Link>
                 <Link to="/agent/merchants?status=draft" className="btn btn-outline" style={{ justifyContent: 'center' }}>

@@ -1,0 +1,220 @@
+.agreement-page {
+  min-height: 100vh;
+  background: #f5f7fb;
+  padding: 24px 16px;
+}
+
+.agreement-container {
+  width: 100%;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.agreement-step-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #7b8494;
+  margin-bottom: 10px;
+}
+
+.agreement-title {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.agreement-description {
+  margin: 12px 0 24px;
+  color: #737b8c;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* PROGRESS */
+
+.agreement-progress {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  overflow: hidden;
+}
+
+.progress-step {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e5e7eb;
+  color: #6b7280;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.progress-step.completed {
+  background: #16a34a;
+  color: white;
+}
+
+.progress-step.active {
+  background: #2563eb;
+  color: white;
+}
+
+.progress-line {
+  height: 2px;
+  flex: 1;
+  background: #dbe1ea;
+}
+
+/* CARD */
+
+.agreement-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+.agreement-card-header {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.agreement-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #eef4ff;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.agreement-card-header h2 {
+  margin: 0 0 7px;
+  font-size: 18px;
+  color: #111827;
+}
+
+.agreement-card-header p {
+  margin: 0;
+  color: #7b8494;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* STATUS */
+
+.agreement-status {
+  margin-top: 22px;
+  padding: 15px;
+  border-radius: 12px;
+  background: #fff8e7;
+  border: 1px solid #f5dfaa;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.status-dot {
+  width: 9px;
+  height: 9px;
+  margin-top: 5px;
+  border-radius: 50%;
+  background: #f59e0b;
+}
+
+.agreement-status strong {
+  display: block;
+  font-size: 14px;
+  color: #92400e;
+}
+
+.agreement-status p {
+  margin: 4px 0 0;
+  font-size: 12px;
+  color: #a16207;
+}
+
+/* PREVIEW */
+
+.agreement-preview {
+  margin-top: 20px;
+  padding: 35px 20px;
+  border: 1px dashed #cfd6e1;
+  border-radius: 14px;
+  text-align: center;
+  background: #fafbfc;
+}
+
+.preview-icon {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.agreement-preview h3 {
+  margin: 0;
+  font-size: 15px;
+  color: #374151;
+}
+
+.agreement-preview p {
+  margin: 8px 0 0;
+  font-size: 12px;
+  color: #8a93a3;
+}
+
+/* BUTTONS */
+
+.agreement-generate-btn {
+  width: 100%;
+  margin-top: 18px;
+  height: 48px;
+  border: 0;
+  border-radius: 10px;
+  background: #e5e7eb;
+  color: #9ca3af;
+  font-weight: 600;
+  cursor: not-allowed;
+}
+
+.agreement-actions {
+  margin-top: 18px;
+}
+
+.agreement-next-btn {
+  width: 100%;
+  height: 50px;
+  border: 0;
+  border-radius: 10px;
+  background: #2563eb;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.agreement-next-btn:hover {
+  background: #1d4ed8;
+}
+
+.agreement-back-btn {
+  width: 100%;
+  height: 46px;
+  margin-top: 10px;
+  border: 1px solid #dfe3ea;
+  border-radius: 10px;
+  background: white;
+  color: #5f6878;
+  font-size: 13px;
+  cursor: pointer;
+}

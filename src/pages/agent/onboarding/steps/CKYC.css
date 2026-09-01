@@ -1,0 +1,656 @@
+/* =========================================================
+   CKYC PAGE
+========================================================= */
+
+.ckyc-page {
+  min-height: 100vh;
+  background: #f6f8fc;
+  padding: 32px 24px 50px;
+  color: #172033;
+}
+
+.ckyc-container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.ckyc-header {
+  margin-bottom: 22px;
+}
+
+.ckyc-step {
+  margin: 0 0 7px;
+  color: #2563eb;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 0.8px;
+}
+
+.ckyc-header h1 {
+  margin: 0;
+  color: #111827;
+  font-size: 30px;
+  line-height: 1.25;
+  font-weight: 750;
+  letter-spacing: -0.5px;
+}
+
+.ckyc-header p:last-child {
+  margin: 7px 0 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   PROGRESS
+========================================================= */
+
+.ckyc-progress-card {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 16px 20px;
+  margin-bottom: 20px;
+  background: #ffffff;
+  border: 1px solid #e5e9f0;
+  border-radius: 15px;
+  box-shadow: 0 3px 13px rgba(15, 23, 42, 0.04);
+}
+
+.ckyc-progress-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 145px;
+}
+
+.ckyc-progress-circle {
+  width: 34px;
+  height: 34px;
+  min-width: 34px;
+  border-radius: 50%;
+  background: #f1f4f8;
+  color: #7b8494;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.ckyc-progress-item.completed .ckyc-progress-circle {
+  background: #16a34a;
+  color: #ffffff;
+}
+
+.ckyc-progress-item.active .ckyc-progress-circle {
+  background: #2563eb;
+  color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+.ckyc-progress-item strong {
+  display: block;
+  color: #374151;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.ckyc-progress-item span {
+  display: block;
+  margin-top: 2px;
+  color: #9299a6;
+  font-size: 11px;
+}
+
+.ckyc-progress-item.active strong {
+  color: #2563eb;
+}
+
+.ckyc-progress-line {
+  flex: 1;
+  height: 1px;
+  margin: 0 13px;
+  background: #e2e6ed;
+}
+
+.ckyc-progress-line.active {
+  background: #93b4f8;
+}
+
+
+/* =========================================================
+   ALERT
+========================================================= */
+
+.ckyc-alert {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 15px;
+  margin-bottom: 18px;
+  border: 1px solid #fecaca;
+  border-radius: 10px;
+  background: #fff5f5;
+  color: #b91c1c;
+  font-size: 13px;
+}
+
+.ckyc-alert-icon {
+  width: 21px;
+  height: 21px;
+  min-width: 21px;
+  border-radius: 50%;
+  background: #dc2626;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.ckyc-section {
+  padding: 25px;
+  margin-bottom: 18px;
+  background: #ffffff;
+  border: 1px solid #e5e9f0;
+  border-radius: 16px;
+  box-shadow: 0 3px 14px rgba(15, 23, 42, 0.045);
+}
+
+.ckyc-section-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.ckyc-section-icon {
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  border-radius: 10px;
+  background: #eef2f7;
+  color: #374151;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 750;
+}
+
+.ckyc-section-icon.blue {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.ckyc-section-heading h2 {
+  margin: 0;
+  color: #172033;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.ckyc-section-heading p {
+  margin: 4px 0 0;
+  color: #7b8494;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   SUMMARY
+========================================================= */
+
+.ckyc-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.ckyc-summary-item {
+  padding: 15px;
+  border: 1px solid #e8ecf2;
+  border-radius: 11px;
+  background: #f9fafc;
+}
+
+.ckyc-summary-item span {
+  display: block;
+  margin-bottom: 5px;
+  color: #8a93a1;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.ckyc-summary-item strong {
+  color: #273142;
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   OPTIONS
+========================================================= */
+
+.ckyc-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.ckyc-option {
+  position: relative;
+  min-height: 175px;
+  padding: 19px;
+  border: 1px solid #e0e5ed;
+  border-radius: 13px;
+  background: #ffffff;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.ckyc-option:hover {
+  border-color: #a9c2f5;
+  background: #fbfdff;
+  transform: translateY(-2px);
+  box-shadow: 0 7px 18px rgba(15, 23, 42, 0.07);
+}
+
+.ckyc-option.selected {
+  border-color: #2563eb;
+  background: #f5f8ff;
+  box-shadow:
+    0 0 0 1px #2563eb,
+    0 6px 18px rgba(37, 99, 235, 0.09);
+}
+
+.ckyc-option.skip-selected {
+  border-color: #64748b;
+  background: #f8fafc;
+  box-shadow:
+    0 0 0 1px #64748b,
+    0 6px 18px rgba(15, 23, 42, 0.06);
+}
+
+.ckyc-option-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ckyc-option-icon {
+  width: 39px;
+  height: 39px;
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 750;
+}
+
+.blue-icon {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.grey-icon {
+  background: #f1f5f9;
+  color: #64748b;
+}
+
+.ckyc-selected {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #2563eb;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.ckyc-option h3 {
+  margin: 17px 0 6px;
+  color: #172033;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.ckyc-option p {
+  margin: 0;
+  max-width: 360px;
+  color: #737d8d;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   INFO
+========================================================= */
+
+.ckyc-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  padding: 15px 17px;
+  margin-bottom: 20px;
+  border: 1px solid #dbeafe;
+  border-radius: 12px;
+  background: #f7faff;
+}
+
+.ckyc-info-icon {
+  width: 22px;
+  height: 22px;
+  min-width: 22px;
+  border-radius: 50%;
+  background: #2563eb;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.ckyc-info strong {
+  color: #1e3a8a;
+  font-size: 12px;
+}
+
+.ckyc-info p {
+  margin: 3px 0 0;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.ckyc-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding-bottom: 15px;
+}
+
+.ckyc-btn {
+  min-height: 46px;
+  padding: 0 20px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 650;
+  cursor: pointer;
+  transition:
+    background 0.18s ease,
+    border-color 0.18s ease,
+    box-shadow 0.18s ease,
+    transform 0.18s ease;
+}
+
+.ckyc-btn.secondary {
+  border: 1px solid #d7dde7;
+  background: #ffffff;
+  color: #4b5563;
+}
+
+.ckyc-btn.secondary:hover {
+  background: #f8fafc;
+  border-color: #c7cfdb;
+}
+
+.ckyc-btn.primary {
+  min-width: 145px;
+  border: 1px solid #2563eb;
+  background: #2563eb;
+  color: #ffffff;
+  box-shadow: 0 5px 12px rgba(37, 99, 235, 0.17);
+}
+
+.ckyc-btn.primary:hover {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 7px 16px rgba(37, 99, 235, 0.22);
+}
+
+.ckyc-btn.primary span {
+  margin-left: 7px;
+}
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.ckyc-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(15, 23, 42, 0.48);
+}
+
+.ckyc-modal {
+  width: 100%;
+  max-width: 430px;
+  padding: 26px;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.2);
+  text-align: center;
+}
+
+.ckyc-modal-icon {
+  width: 44px;
+  height: 44px;
+  margin: 0 auto 14px;
+  border-radius: 50%;
+  background: #fff7ed;
+  color: #ea580c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 750;
+}
+
+.ckyc-modal h2 {
+  margin: 0;
+  color: #172033;
+  font-size: 19px;
+}
+
+.ckyc-modal p {
+  margin: 9px 0 20px;
+  color: #6b7280;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.ckyc-modal-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.ckyc-modal-actions button {
+  flex: 1;
+  min-height: 44px;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.ckyc-modal-cancel {
+  border: 1px solid #d7dde7;
+  background: #ffffff;
+  color: #4b5563;
+}
+
+.ckyc-modal-confirm {
+  border: 1px solid #2563eb;
+  background: #2563eb;
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .ckyc-page {
+    padding: 20px 14px 32px;
+  }
+
+  .ckyc-header h1 {
+    font-size: 25px;
+  }
+
+  .ckyc-header p:last-child {
+    font-size: 13px;
+  }
+
+
+  /* Progress */
+
+  .ckyc-progress-card {
+    padding: 13px;
+    overflow-x: auto;
+  }
+
+  .ckyc-progress-item {
+    min-width: auto;
+  }
+
+  .ckyc-progress-item > div:last-child {
+    display: none;
+  }
+
+  .ckyc-progress-line {
+    min-width: 25px;
+    margin: 0 8px;
+  }
+
+  .ckyc-progress-circle {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+  }
+
+
+  /* Section */
+
+  .ckyc-section {
+    padding: 18px 16px;
+    border-radius: 13px;
+  }
+
+
+  /* Summary */
+
+  .ckyc-summary {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+
+  /* Options */
+
+  .ckyc-options {
+    grid-template-columns: 1fr;
+    gap: 11px;
+  }
+
+  .ckyc-option {
+    min-height: 145px;
+  }
+
+
+  /* Actions */
+
+  .ckyc-actions {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .ckyc-btn {
+    width: 100%;
+    min-height: 48px;
+  }
+
+  .ckyc-btn.primary {
+    min-width: 0;
+  }
+
+
+  /* Modal */
+
+  .ckyc-modal {
+    padding: 22px 18px;
+  }
+
+  .ckyc-modal-actions {
+    flex-direction: column-reverse;
+  }
+
+  .ckyc-modal-actions button {
+    min-height: 47px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .ckyc-page {
+    padding-left: 11px;
+    padding-right: 11px;
+  }
+
+  .ckyc-section {
+    padding: 16px 13px;
+  }
+
+  .ckyc-header h1 {
+    font-size: 23px;
+  }
+}

@@ -1,0 +1,480 @@
+.digilocker-page {
+  min-height: 100vh;
+  background: #f6f8fc;
+  padding: 32px 24px 50px;
+  color: #172033;
+}
+
+.digilocker-container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+
+/* HEADER */
+
+.digilocker-header {
+  margin-bottom: 22px;
+}
+
+.digilocker-step {
+  margin: 0 0 7px;
+  color: #2563eb;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: .8px;
+}
+
+.digilocker-header h1 {
+  margin: 0;
+  color: #111827;
+  font-size: 30px;
+  font-weight: 750;
+}
+
+.digilocker-header p:last-child {
+  margin: 7px 0 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+
+/* PROGRESS */
+
+.digilocker-progress-card {
+  display: flex;
+  align-items: center;
+  padding: 16px 20px;
+  margin-bottom: 20px;
+  overflow-x: auto;
+  background: #fff;
+  border: 1px solid #e5e9f0;
+  border-radius: 15px;
+  box-shadow: 0 3px 13px rgba(15,23,42,.04);
+}
+
+.digilocker-progress-wrapper {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.digilocker-progress-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 145px;
+}
+
+.digilocker-progress-circle {
+  width: 34px;
+  height: 34px;
+  min-width: 34px;
+  border-radius: 50%;
+  background: #f1f4f8;
+  color: #7b8494;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.digilocker-progress-item.completed .digilocker-progress-circle {
+  background: #16a34a;
+  color: #fff;
+}
+
+.digilocker-progress-item.active .digilocker-progress-circle {
+  background: #2563eb;
+  color: #fff;
+  box-shadow: 0 0 0 4px rgba(37,99,235,.1);
+}
+
+.digilocker-progress-item strong {
+  display: block;
+  color: #374151;
+  font-size: 12px;
+}
+
+.digilocker-progress-item.active strong {
+  color: #2563eb;
+}
+
+.digilocker-progress-item span {
+  display: block;
+  margin-top: 2px;
+  color: #9299a6;
+  font-size: 11px;
+}
+
+.digilocker-progress-line {
+  flex: 1;
+  height: 1px;
+  min-width: 30px;
+  margin: 0 13px;
+  background: #93b4f8;
+}
+
+
+/* ALERT */
+
+.digilocker-alert {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 15px;
+  margin-bottom: 18px;
+  border: 1px solid #fecaca;
+  border-radius: 10px;
+  background: #fff5f5;
+  color: #b91c1c;
+  font-size: 13px;
+}
+
+.digilocker-alert-icon {
+  width: 21px;
+  height: 21px;
+  min-width: 21px;
+  border-radius: 50%;
+  background: #dc2626;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+
+/* SECTION */
+
+.digilocker-section {
+  padding: 25px;
+  margin-bottom: 18px;
+  background: #fff;
+  border: 1px solid #e5e9f0;
+  border-radius: 16px;
+  box-shadow: 0 3px 14px rgba(15,23,42,.045);
+}
+
+.digilocker-section-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.digilocker-section-icon {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  border-radius: 11px;
+  background: #eff6ff;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 750;
+}
+
+.digilocker-section-icon.small {
+  font-size: 14px;
+}
+
+.digilocker-section-heading h2 {
+  margin: 0;
+  color: #172033;
+  font-size: 17px;
+}
+
+.digilocker-section-heading p {
+  margin: 4px 0 0;
+  color: #7b8494;
+  font-size: 12px;
+}
+
+
+/* STATUS */
+
+.digilocker-status-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 18px;
+  border: 1px solid #e1e6ee;
+  border-radius: 13px;
+  background: #fafbfd;
+}
+
+.digilocker-status-card.success {
+  border-color: #bbf7d0;
+  background: #f0fdf4;
+}
+
+.digilocker-status-card.processing {
+  border-color: #bfdbfe;
+  background: #eff6ff;
+}
+
+.digilocker-status-icon {
+  width: 46px;
+  height: 46px;
+  min-width: 46px;
+  border-radius: 13px;
+  background: #eff6ff;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.digilocker-status-card.success .digilocker-status-icon {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.digilocker-status-content {
+  flex: 1;
+}
+
+.digilocker-status-content strong {
+  display: block;
+  color: #172033;
+  font-size: 14px;
+}
+
+.digilocker-status-content p {
+  margin: 4px 0 0;
+  color: #7b8494;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.digilocker-success-badge {
+  padding: 6px 11px;
+  border-radius: 20px;
+  background: #dcfce7;
+  color: #15803d;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+
+/* BUTTON */
+
+.digilocker-start-btn {
+  width: 100%;
+  min-height: 47px;
+  margin-top: 18px;
+  border: 1px solid #2563eb;
+  border-radius: 10px;
+  background: #2563eb;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.digilocker-start-btn:hover {
+  background: #1d4ed8;
+}
+
+.digilocker-start-btn:disabled {
+  opacity: .65;
+  cursor: not-allowed;
+}
+
+
+/* CHECK LIST */
+
+.digilocker-check-list {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 12px;
+}
+
+.digilocker-check-item {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 13px;
+  border: 1px solid #e5e9f0;
+  border-radius: 10px;
+  color: #4b5563;
+  font-size: 12px;
+}
+
+.digilocker-check-item span {
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  background: #dcfce7;
+  color: #16a34a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+
+/* INFO */
+
+.digilocker-info {
+  display: flex;
+  gap: 11px;
+  padding: 15px 17px;
+  margin-bottom: 20px;
+  border: 1px solid #dbeafe;
+  border-radius: 12px;
+  background: #f7faff;
+}
+
+.digilocker-info-icon {
+  width: 22px;
+  height: 22px;
+  min-width: 22px;
+  border-radius: 50%;
+  background: #2563eb;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.digilocker-info strong {
+  color: #1e3a8a;
+  font-size: 12px;
+}
+
+.digilocker-info p {
+  margin: 3px 0 0;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+
+/* ACTIONS */
+
+.digilocker-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.digilocker-btn {
+  min-height: 46px;
+  padding: 0 20px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.digilocker-btn.secondary {
+  border: 1px solid #d7dde7;
+  background: #fff;
+  color: #4b5563;
+}
+
+.digilocker-btn.primary {
+  min-width: 145px;
+  border: 1px solid #2563eb;
+  background: #2563eb;
+  color: #fff;
+}
+
+.digilocker-btn.primary:disabled {
+  opacity: .45;
+  cursor: not-allowed;
+}
+
+.digilocker-link-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.digilocker-check-btn {
+  width: 100%;
+  padding: 14px 20px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  background: #fff;
+  color: #374151;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.digilocker-check-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .digilocker-page {
+    padding: 20px 14px 32px;
+  }
+
+  .digilocker-header h1 {
+    font-size: 25px;
+  }
+
+  .digilocker-progress-card {
+    padding: 13px;
+  }
+
+  .digilocker-progress-item {
+    min-width: auto;
+  }
+
+  .digilocker-progress-item > div:last-child {
+    display: none;
+  }
+
+  .digilocker-progress-line {
+    min-width: 24px;
+    margin: 0 7px;
+  }
+
+  .digilocker-section {
+    padding: 18px 16px;
+  }
+
+  .digilocker-status-card {
+    align-items: flex-start;
+  }
+
+  .digilocker-success-badge {
+    display: none;
+  }
+
+  .digilocker-check-list {
+    grid-template-columns: 1fr;
+  }
+
+  .digilocker-actions {
+    flex-direction: column-reverse;
+  }
+
+  .digilocker-btn {
+    width: 100%;
+    min-height: 48px;
+  }
+
+  .digilocker-btn.primary {
+    min-width: 0;
+  }
+}

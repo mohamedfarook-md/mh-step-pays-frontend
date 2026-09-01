@@ -1,0 +1,851 @@
+/* ======================================================
+   VKYC PAGE
+====================================================== */
+
+.vkyc-page {
+  min-height: 100vh;
+  background: #f6f8fc;
+  padding: 32px 24px 50px;
+  color: #172033;
+}
+
+.vkyc-container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+
+/* ======================================================
+   HEADER
+====================================================== */
+
+.vkyc-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 22px;
+}
+
+.vkyc-step {
+  margin: 0 0 7px;
+  color: #2563eb;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 0.8px;
+}
+
+.vkyc-header h1 {
+  margin: 0;
+  color: #111827;
+  font-size: 30px;
+  font-weight: 750;
+}
+
+.vkyc-header p:last-child {
+  margin: 7px 0 0;
+  color: #6b7280;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.vkyc-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 36px;
+  padding: 0 13px;
+  border: 1px solid #bfdbfe;
+  border-radius: 20px;
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 650;
+  white-space: nowrap;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #2563eb;
+}
+
+
+/* ======================================================
+   PROGRESS
+====================================================== */
+
+.vkyc-progress-card {
+  display: flex;
+  align-items: center;
+  padding: 16px 20px;
+  margin-bottom: 20px;
+  overflow-x: auto;
+  background: #ffffff;
+  border: 1px solid #e5e9f0;
+  border-radius: 15px;
+  box-shadow: 0 3px 13px rgba(15, 23, 42, 0.04);
+}
+
+.vkyc-progress-wrapper {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.vkyc-progress-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 135px;
+}
+
+.vkyc-progress-circle {
+  width: 34px;
+  height: 34px;
+  min-width: 34px;
+  border-radius: 50%;
+  background: #f1f4f8;
+  color: #7b8494;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.vkyc-progress-item.completed
+.vkyc-progress-circle {
+  background: #16a34a;
+  color: #ffffff;
+}
+
+.vkyc-progress-item.active
+.vkyc-progress-circle {
+  background: #2563eb;
+  color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+.vkyc-progress-item strong {
+  display: block;
+  color: #374151;
+  font-size: 12px;
+}
+
+.vkyc-progress-item.active strong {
+  color: #2563eb;
+}
+
+.vkyc-progress-item span {
+  display: block;
+  margin-top: 2px;
+  color: #9299a6;
+  font-size: 11px;
+}
+
+.vkyc-progress-item.pending
+.vkyc-progress-circle {
+  background: #f3f4f6;
+  color: #9ca3af;
+}
+
+.vkyc-progress-line {
+  flex: 1;
+  height: 1px;
+  min-width: 25px;
+  margin: 0 10px;
+  background: #e5e7eb;
+}
+
+.vkyc-progress-line.active {
+  background: #93b4f8;
+}
+
+
+/* ======================================================
+   ELIGIBILITY
+====================================================== */
+
+.vkyc-eligibility {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  padding: 15px 17px;
+  margin-bottom: 18px;
+  border: 1px solid #bbf7d0;
+  border-radius: 12px;
+  background: #f6fff8;
+}
+
+.vkyc-info-icon {
+  width: 23px;
+  height: 23px;
+  min-width: 23px;
+  border-radius: 50%;
+  background: #16a34a;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.vkyc-eligibility strong {
+  color: #166534;
+  font-size: 13px;
+}
+
+.vkyc-eligibility p {
+  margin: 3px 0 0;
+  color: #4b6b54;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+
+/* ======================================================
+   COMMON SECTION
+====================================================== */
+
+.vkyc-section {
+  padding: 24px;
+  margin-bottom: 18px;
+  background: #ffffff;
+  border: 1px solid #e5e9f0;
+  border-radius: 16px;
+  box-shadow: 0 3px 14px rgba(15, 23, 42, 0.045);
+}
+
+.vkyc-section-header {
+  margin-bottom: 20px;
+}
+
+.vkyc-section-header h2 {
+  margin: 0;
+  color: #172033;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.vkyc-section-header p {
+  margin: 4px 0 0;
+  color: #7b8494;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+
+/* ======================================================
+   MERCHANT DETAILS
+====================================================== */
+
+.vkyc-details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid #e6eaf0;
+  border-radius: 12px;
+  background: #e6eaf0;
+}
+
+.vkyc-detail-item {
+  padding: 16px;
+  background: #ffffff;
+}
+
+.vkyc-detail-item span {
+  display: block;
+  margin-bottom: 6px;
+  color: #8a93a1;
+  font-size: 10px;
+  font-weight: 650;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.vkyc-detail-item strong {
+  display: block;
+  color: #172033;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.verified-text {
+  color: #16a34a !important;
+}
+
+
+/* ======================================================
+   VERIFICATION CHECKLIST
+====================================================== */
+
+.vkyc-check-list {
+  display: grid;
+  gap: 10px;
+}
+
+.vkyc-check-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid #e2e7ee;
+  border-radius: 11px;
+  background: #fafbfd;
+}
+
+.check-icon {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  border-radius: 10px;
+  background: #dcfce7;
+  color: #16a34a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 750;
+}
+
+.vkyc-check-item > div:nth-child(2) {
+  flex: 1;
+  min-width: 0;
+}
+
+.vkyc-check-item strong {
+  display: block;
+  color: #172033;
+  font-size: 13px;
+}
+
+.vkyc-check-item span {
+  display: block;
+  margin-top: 3px;
+  color: #7b8494;
+  font-size: 11px;
+}
+
+.approved-badge {
+  padding: 5px 9px;
+  border-radius: 15px;
+  background: #dcfce7;
+  color: #15803d;
+  font-size: 9px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+
+/* ======================================================
+   MAIN VKYC CARD
+====================================================== */
+
+.vkyc-main-card {
+  padding: 34px 28px;
+  margin-bottom: 18px;
+  border: 1px solid #dbe5f5;
+  border-radius: 17px;
+  background: linear-gradient(
+    145deg,
+    #ffffff 0%,
+    #f7faff 100%
+  );
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(37, 99, 235, 0.06);
+}
+
+.vkyc-video-icon {
+  width: 68px;
+  height: 68px;
+  margin: 0 auto 17px;
+  border-radius: 20px;
+  background: #eff6ff;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 8px rgba(37, 99, 235, 0.04);
+}
+
+.vkyc-video-icon span {
+  margin-left: 3px;
+  font-size: 25px;
+}
+
+.vkyc-main-card h2 {
+  margin: 0;
+  color: #172033;
+  font-size: 21px;
+  font-weight: 750;
+}
+
+.vkyc-main-card > p {
+  max-width: 570px;
+  margin: 8px auto 20px;
+  color: #6b7280;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+
+/* ======================================================
+   VKYC TIMING
+====================================================== */
+
+.vkyc-timing {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  border: 1px solid #e1e8f3;
+  border-radius: 10px;
+  background: #ffffff;
+  text-align: left;
+}
+
+.timing-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: #eff6ff;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.vkyc-timing strong {
+  display: block;
+  color: #374151;
+  font-size: 11px;
+}
+
+.vkyc-timing span {
+  display: block;
+  margin-top: 2px;
+  color: #6b7280;
+  font-size: 11px;
+}
+
+
+/* ======================================================
+   BUTTON
+====================================================== */
+
+.vkyc-primary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 190px;
+  min-height: 46px;
+  padding: 0 20px;
+  border: 1px solid #2563eb;
+  border-radius: 10px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 650;
+  cursor: pointer;
+  box-shadow: 0 5px 13px rgba(37, 99, 235, 0.16);
+  transition: all 0.2s ease;
+}
+
+.vkyc-primary-btn:hover {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.vkyc-primary-btn:active {
+  transform: translateY(0);
+}
+
+.vkyc-primary-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.vkyc-primary-btn span {
+  font-size: 15px;
+}
+
+
+/* ======================================================
+   MESSAGE
+====================================================== */
+
+.vkyc-message {
+  max-width: 560px;
+  margin: 0 auto 15px;
+  padding: 11px 14px;
+  border: 1px solid #bbf7d0;
+  border-radius: 9px;
+  background: #f0fdf4;
+  color: #15803d;
+  font-size: 12px;
+}
+
+
+/* ======================================================
+   GENERATED LINK
+====================================================== */
+
+.vkyc-link-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.vkyc-link-success {
+  margin-bottom: 14px;
+  color: #15803d;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.vkyc-link-note {
+  max-width: 500px;
+  margin: 10px auto 0;
+  color: #7b8494;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+
+/* ======================================================
+   WAITING
+====================================================== */
+
+.vkyc-waiting {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+}
+
+.vkyc-loader {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 5px;
+  border: 3px solid #dbeafe;
+  border-top-color: #2563eb;
+  border-radius: 50%;
+  animation: vkyc-spin 0.8s linear infinite;
+}
+
+@keyframes vkyc-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.vkyc-waiting strong {
+  color: #172033;
+  font-size: 13px;
+}
+
+.vkyc-waiting span {
+  color: #7b8494;
+  font-size: 11px;
+}
+
+
+/* ======================================================
+   INSTRUCTIONS
+====================================================== */
+
+.vkyc-instructions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 11px;
+}
+
+.instruction-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  padding: 14px;
+  border: 1px solid #e5e9f0;
+  border-radius: 11px;
+  background: #fafbfd;
+}
+
+.instruction-item > span {
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+  border-radius: 8px;
+  background: #eff6ff;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  font-weight: 750;
+}
+
+.instruction-item strong {
+  display: block;
+  color: #374151;
+  font-size: 12px;
+}
+
+.instruction-item p {
+  margin: 4px 0 0;
+  color: #7b8494;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+
+/* ======================================================
+   REVIEW NOTICE
+====================================================== */
+
+.vkyc-review-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  padding: 15px 17px;
+  margin-bottom: 20px;
+  border: 1px solid #dbeafe;
+  border-radius: 12px;
+  background: #f7faff;
+}
+
+.review-icon {
+  width: 22px;
+  height: 22px;
+  min-width: 22px;
+  border-radius: 50%;
+  background: #2563eb;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.vkyc-review-notice strong {
+  color: #1e3a8a;
+  font-size: 12px;
+}
+
+.vkyc-review-notice p {
+  margin: 3px 0 0;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+
+/* ======================================================
+   BOTTOM ACTIONS
+====================================================== */
+
+.vkyc-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding-bottom: 15px;
+}
+
+.vkyc-secondary-btn {
+  min-height: 44px;
+  padding: 0 18px;
+  border: 1px solid #d7dde7;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #4b5563;
+  font-size: 12px;
+  font-weight: 650;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.vkyc-secondary-btn:hover {
+  background: #f8fafc;
+  border-color: #c8d0dc;
+}
+
+
+/* ======================================================
+   TABLET
+====================================================== */
+
+@media (max-width: 900px) {
+
+  .vkyc-progress-item {
+    min-width: 100px;
+  }
+
+  .vkyc-progress-item > div:last-child {
+    display: none;
+  }
+
+  .vkyc-progress-line {
+    min-width: 22px;
+    margin: 0 7px;
+  }
+
+}
+
+
+/* ======================================================
+   MOBILE
+====================================================== */
+
+@media (max-width: 700px) {
+
+  .vkyc-page {
+    padding: 20px 14px 35px;
+  }
+
+  .vkyc-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 13px;
+  }
+
+  .vkyc-header h1 {
+    font-size: 25px;
+  }
+
+  .vkyc-status-pill {
+    min-height: 34px;
+  }
+
+  .vkyc-progress-card {
+    padding: 13px;
+  }
+
+  .vkyc-progress-item {
+    min-width: auto;
+  }
+
+  .vkyc-progress-item > div:last-child {
+    display: none;
+  }
+
+  .vkyc-progress-line {
+    min-width: 22px;
+    margin: 0 6px;
+  }
+
+  .vkyc-section {
+    padding: 18px 16px;
+  }
+
+  .vkyc-details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .vkyc-detail-item {
+    padding: 13px;
+  }
+
+  .vkyc-check-item {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .vkyc-check-item > div:nth-child(2) {
+    padding-top: 2px;
+  }
+
+  .approved-badge {
+    margin-left: 48px;
+  }
+
+  .vkyc-main-card {
+    padding: 28px 17px;
+  }
+
+  .vkyc-main-card h2 {
+    font-size: 19px;
+  }
+
+  .vkyc-main-card > p {
+    font-size: 12px;
+  }
+
+  .vkyc-timing {
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: flex-start;
+  }
+
+  .vkyc-primary-btn {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .vkyc-instructions {
+    grid-template-columns: 1fr;
+  }
+
+  .vkyc-review-notice {
+    padding: 14px;
+  }
+
+  .vkyc-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .vkyc-secondary-btn {
+    width: 100%;
+    min-height: 47px;
+  }
+
+}
+
+
+/* ======================================================
+   SMALL MOBILE
+====================================================== */
+
+@media (max-width: 420px) {
+
+  .vkyc-page {
+    padding: 17px 11px 30px;
+  }
+
+  .vkyc-header h1 {
+    font-size: 23px;
+  }
+
+  .vkyc-section {
+    padding: 16px 13px;
+  }
+
+  .vkyc-main-card {
+    padding: 25px 14px;
+  }
+
+  .vkyc-video-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .vkyc-video-icon span {
+    font-size: 22px;
+  }
+
+  .vkyc-timing {
+    padding: 9px 11px;
+  }
+
+}
