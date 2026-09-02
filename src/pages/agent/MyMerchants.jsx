@@ -116,6 +116,37 @@ const STATUSES = [
   'qr_uploaded','qr_deployed','active','commission_eligible','rejected'
 ];
 
+const getResumeRoute = (merchant) => {
+  switch (merchant.currentSection) {
+    case 'entity':
+      return `/agent/merchant/${merchant._id}/pan`;
+
+    case 'ckyc':
+      return `/agent/merchant/${merchant._id}/ckyc`;
+
+    case 'bank_verification':
+      return `/agent/merchant/${merchant._id}/bank`;
+
+    case 'signatory':
+      return `/agent/merchant/${merchant._id}/signing-authority`;
+
+    case 'digilocker':
+      return `/agent/merchant/${merchant._id}/digilocker`;
+
+    case 'business_members':
+      return `/agent/merchant/${merchant._id}/ubo`;
+
+    case 'documents':
+      return `/agent/merchant/${merchant._id}/documents`;
+
+    case 'vkyc':
+      return `/agent/merchant/${merchant._id}/vkyc`;
+
+    default:
+      return `/agent/merchant/${merchant._id}/pan`;
+  }
+};
+
 export default function MyMerchants() {
   const [merchants, setMerchants] = useState([]);
   const [pagination, setPagination] = useState({ page: 1, pages: 1, total: 0 });
@@ -219,9 +250,23 @@ export default function MyMerchants() {
                           <td><StatusBadge status={m.status} /></td>
                           <td>{m.commissionEligible ? <span style={{ color: 'var(--success)', fontWeight: 600 }}>💰 Eligible</span> : <span style={{ color: 'var(--text-muted)' }}>—</span>}</td>
                           <td style={{ fontSize: '0.78rem', color: 'var(--text-muted)', whiteSpace: 'nowrap' }}>{new Date(m.createdAt).toLocaleDateString('en-IN')}</td>
-                          <td>
-                            <Link to={`/agent/merchants/${m._id}`} className="btn btn-outline btn-sm">View</Link>
-                          </td>
+                         <td style={{ display: 'flex', gap: 6 }}>
+  {m.status === 'draft' && (
+    <Link
+     to={getResumeRoute(m)}
+      className="btn btn-primary btn-sm"
+    >
+      Continue
+    </Link>
+  )}
+
+  <Link
+    to={`/agent/merchants/${m._id}`}
+    className="btn btn-outline btn-sm"
+  >
+    View
+  </Link>
+</td>
                         </tr>
                       ))}
                     </tbody>
