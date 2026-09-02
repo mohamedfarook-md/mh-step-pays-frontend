@@ -436,3 +436,24 @@ tr:hover td { background: rgba(79,142,247,0.03); }
   /* Dashboard bottom panels stack */
   .agent-dash-bottom { grid-template-columns: 1fr !important; }
 }
+
+/* Mobile logout */
+.mobile-logout {
+  display: none;
+}
+
+/* Desktop: keep existing footer logout */
+.desktop-logout {
+  display: flex;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .mobile-logout {
+    display: flex;
+  }
+
+  .desktop-logout {
+    display: none;
+  }
+}

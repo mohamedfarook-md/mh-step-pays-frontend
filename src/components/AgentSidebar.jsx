@@ -142,6 +142,23 @@ export default function AgentSidebar() {
           ))}
         </nav>
 
+        <button
+  className="nav-item mobile-logout"
+  onClick={handleLogout}
+>
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    width="18"
+    height="18"
+  >
+    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9" />
+  </svg>
+  Logout
+</button>
+
         <div className="sidebar-footer">
           <div style={{ padding: '8px 14px', marginBottom: 8 }}>
             <div style={{ fontSize: '0.72rem', color: 'rgba(255,255,255,0.45)', marginBottom: 2, textTransform: 'uppercase', letterSpacing: '1px' }}>Logged in as</div>
