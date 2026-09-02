@@ -96,12 +96,32 @@ export const getAdminMerchant = async (
 // GET ONBOARDING PROGRESS
 // ======================================================
 
-export const getAdminOnboardingProgress = async (
+// export const getAdminOnboardingProgress = async (
+//     merchantId
+// ) => {
+//     try {
+//         const response = await api.get(
+//             `/admin/merchants/${merchantId}/onboarding-progress`
+//         );
+
+//         return response.data;
+//     } catch (error) {
+//         handleAdminError(error);
+//     }
+// };
+
+
+
+// ======================================================
+// GET COMPLETE MERCHANT ONBOARDING DETAILS
+// ======================================================
+
+export const getAdminOnboarding = async (
     merchantId
 ) => {
     try {
         const response = await api.get(
-            `/admin/merchants/${merchantId}/onboarding-progress`
+            `/admin/merchants/${merchantId}/onboarding`
         );
 
         return response.data;
