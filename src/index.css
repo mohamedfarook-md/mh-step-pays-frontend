@@ -440,6 +440,7 @@ tr:hover td { background: rgba(79,142,247,0.03); }
 /* Mobile logout */
 .mobile-logout {
   display: none;
+  color: #ff4d4d !important;
 }
 
 /* Desktop: keep existing footer logout */
@@ -451,6 +452,7 @@ tr:hover td { background: rgba(79,142,247,0.03); }
 @media (max-width: 768px) {
   .mobile-logout {
     display: flex;
+    color: #ff4d4d !important;
   }
 
   .desktop-logout {
