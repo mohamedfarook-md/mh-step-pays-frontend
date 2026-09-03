@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import "./BankDetails.css";
 import { updateBankDetails, getMerchant } from "../../../../services/merchantApi";
 export default function BankDetails() {
   const navigate = useNavigate();
+  const { id } = useParams();
 
   const [form, setForm] = useState({
     accountHolderName: "",
@@ -21,9 +22,7 @@ const [loadingMerchant, setLoadingMerchant] = useState(true);
 useEffect(() => {
   const loadMerchant = async () => {
     try {
-      const merchantId = localStorage.getItem(
-        "onboardingMerchantId"
-      );
+      const merchantId = id;
 
       if (!merchantId) {
         setError(
@@ -39,9 +38,25 @@ useEffect(() => {
         response
       );
 
-      if (response?.success) {
-        setMerchant(response.data);
-      } else {
+    if (response?.success) {
+  const merchantData = response.data;
+
+  setMerchant(merchantData);
+
+  const bank = merchantData?.bank;
+
+  if (bank) {
+    setForm({
+      accountHolderName: bank.accountHolderName || "",
+      accountNumber: bank.accountNumber || "",
+      confirmAccountNumber: bank.accountNumber || "",
+      ifsc: bank.ifsc || "",
+      bankName: bank.bankName || "",
+      branchName: bank.branchName || "",
+    });
+  }
+
+} else {
         setError(
           response?.message ||
           "Unable to load merchant details."
@@ -65,7 +80,7 @@ useEffect(() => {
   };
 
   loadMerchant();
-}, []);
+}, [id]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -119,9 +134,7 @@ useEffect(() => {
     setError("");
 
 try {
-  const merchantId = localStorage.getItem(
-    "onboardingMerchantId"
-  );
+ const merchantId = id;
 
   if (!merchantId) {
     setError(

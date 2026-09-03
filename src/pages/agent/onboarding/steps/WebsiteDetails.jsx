@@ -1,10 +1,45 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { updateWebsiteDetails } from "../../../../services/merchantApi";
+import { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import { updateWebsiteDetails, getMerchant } from "../../../../services/merchantApi";
 import "./WebsiteDetails.css";
 
 export default function WebsiteDetails() {
   const navigate = useNavigate();
+   const { id } = useParams();
+     useEffect(() => {
+    const loadMerchant = async () => {
+      if (!id) return;
+
+      try {
+        const response = await getMerchant(id);
+        const merchantData = response?.data;
+
+        if (!merchantData) return;
+
+        const website = merchantData?.website;
+
+        if (
+          website?.websiteUrl ||
+          website?.androidUrl ||
+          website?.iosUrl
+        ) {
+          setOption("website");
+
+          setForm({
+            websiteUrl: website.websiteUrl || "",
+            androidUrl: website.androidUrl || "",
+            iosUrl: website.iosUrl || "",
+          });
+        } else {
+          setOption("");
+        }
+      } catch (error) {
+        console.error("LOAD WEBSITE DETAILS ERROR:", error);
+      }
+    };
+
+    loadMerchant();
+  }, [id]);
 
   const [option, setOption] = useState("");
   const [form, setForm] = useState({
@@ -29,9 +64,7 @@ export default function WebsiteDetails() {
 
   const handleContinue = async () => {
 
-  const merchantId = localStorage.getItem(
-    "onboardingMerchantId"
-  );
+  const merchantId = id;
 
   if (!merchantId) {
     setError(
@@ -109,9 +142,7 @@ export default function WebsiteDetails() {
 
   const confirmSkip = async () => {
 
-  const merchantId = localStorage.getItem(
-    "onboardingMerchantId"
-  );
+ const merchantId = id;
 
   if (!merchantId) {
     setError(

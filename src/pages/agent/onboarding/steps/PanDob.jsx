@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import "./PanDob.css";
 import { getMerchant, verifyPAN } from "../../../../services/merchantApi";
 export default function PanDob() {
   const navigate = useNavigate();
+  const { id } = useParams();
 
   const [form, setForm] = useState({
   pan: "",
@@ -17,19 +18,17 @@ const [loadingMerchant, setLoadingMerchant] = useState(true);
 
 useEffect(() => {
   const loadMerchant = async () => {
-    try {
-      const merchantId = localStorage.getItem(
-        "onboardingMerchantId"
+  try {
+    const merchantId = id;
+
+    if (!merchantId) {
+      setError(
+        "Merchant ID not found. Please return to My Merchants."
       );
+      return;
+    }
 
-      if (!merchantId) {
-        setError(
-          "Merchant session not found. Please start the onboarding again."
-        );
-        return;
-      }
-
-      const response = await getMerchant(merchantId);
+    const response = await getMerchant(merchantId);
 
       console.log(
         "PAN PAGE MERCHANT:",
@@ -99,16 +98,15 @@ useEffect(() => {
       return;
     }
 
-   const merchantId = localStorage.getItem(
-  "onboardingMerchantId"
-);
+  const merchantId = id;
 
 if (!merchantId) {
   setError(
-    "Merchant session not found. Please start the onboarding again."
+    "Merchant ID not found. Please return to My Merchants."
   );
   return;
 }
+
 
 try {
   setError("");

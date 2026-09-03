@@ -115,38 +115,47 @@ const STATUSES = [
   'draft','submitted','under_review','approved',
   'qr_uploaded','qr_deployed','active','commission_eligible','rejected'
 ];
-
 const getResumeRoute = (merchant) => {
-  switch (merchant.currentSection) {
-    case 'entity':
-      return `/agent/merchant/${merchant._id}/pan`;
+  const merchantId = merchant._id;
 
-    case 'ckyc':
-      return `/agent/merchant/${merchant._id}/ckyc`;
+  switch (merchant.onboardingStep) {
+    case 1:
+      return `/agent/merchant/${merchantId}/pan`;
 
-    case 'bank_verification':
-      return `/agent/merchant/${merchant._id}/bank`;
+    case 2:
+      return `/agent/merchant/${merchantId}/ckyc`;
 
-    case 'signatory':
-      return `/agent/merchant/${merchant._id}/signing-authority`;
+    case 3:
+      return `/agent/merchant/${merchantId}/ckyc`;
 
-    case 'digilocker':
-      return `/agent/merchant/${merchant._id}/digilocker`;
+    case 4:
+      return `/agent/merchant/${merchantId}/bank`;
 
-    case 'business_members':
-      return `/agent/merchant/${merchant._id}/ubo`;
+    case 5:
+      return `/agent/merchant/${merchantId}/business`;
 
-    case 'documents':
-      return `/agent/merchant/${merchant._id}/documents`;
+    case 6:
+      return `/agent/merchant/${merchantId}/website`;
 
-    case 'vkyc':
-      return `/agent/merchant/${merchant._id}/vkyc`;
+    case 7:
+      return `/agent/merchant/${merchantId}/signing-authority`;
+
+    case 8:
+      return `/agent/merchant/${merchantId}/digilocker`;
+
+    case 9:
+      return `/agent/merchant/${merchantId}/ubo`;
+
+    case 10:
+      return `/agent/merchant/${merchantId}/documents`;
+
+    case 11:
+      return `/agent/merchant/${merchantId}/vkyc`;
 
     default:
-      return `/agent/merchant/${merchant._id}/pan`;
+      return `/agent/merchant/${merchantId}/pan`;
   }
 };
-
 export default function MyMerchants() {
   const [merchants, setMerchants] = useState([]);
   const [pagination, setPagination] = useState({ page: 1, pages: 1, total: 0 });

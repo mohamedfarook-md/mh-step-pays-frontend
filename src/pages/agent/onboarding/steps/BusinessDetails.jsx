@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import "./BusinessDetails.css";
 import { getMerchant, updateBusinessInformation, } from "../../../../services/merchantApi";
 
@@ -227,6 +227,7 @@ const categories = {
 
 export default function BusinessDetails() {
   const navigate = useNavigate();
+  const { id } = useParams();
 
   const [form, setForm] = useState({
     businessCategory: "",
@@ -255,9 +256,7 @@ const [loadingMerchant, setLoadingMerchant] = useState(true);
 useEffect(() => {
   const loadMerchant = async () => {
     try {
-      const merchantId = localStorage.getItem(
-        "onboardingMerchantId"
-      );
+     const merchantId = id;
 
       if (!merchantId) {
         setError(
@@ -273,9 +272,43 @@ useEffect(() => {
         response
       );
 
-      if (response?.success) {
-        setMerchant(response.data);
-      } else {
+    if (response?.success) {
+  const merchantData = response.data;
+
+  setMerchant(merchantData);
+
+  const business = merchantData?.businessInformation;
+
+  if (business) {
+    setForm({
+      businessCategory: business.businessCategory || "",
+      businessSubCategory: business.businessSubCategory || "",
+      expectedMonthlySales: business.expectedMonthlySales || "",
+      gstin: business.gstin || "",
+      cin: business.cin || "",
+      tradeName: business.tradeName || "",
+
+      operatingAddress: business.operatingAddress || "",
+      operatingCity: business.operatingCity || "",
+      operatingState: business.operatingState || "",
+      operatingPincode: business.operatingPincode || "",
+
+      registrationAddress: business.registrationAddress || "",
+      registrationCity: business.registrationCity || "",
+      registrationState: business.registrationState || "",
+      registrationPincode: business.registrationPincode || "",
+    });
+
+    const isSame =
+  business.registrationAddress === business.operatingAddress &&
+  business.registrationCity === business.operatingCity &&
+  business.registrationState === business.operatingState &&
+  business.registrationPincode === business.operatingPincode;
+
+setSameAddress(isSame);
+  }
+
+} else {
         setError(
           response?.message ||
           "Unable to load merchant details."
@@ -300,7 +333,7 @@ useEffect(() => {
   };
 
   loadMerchant();
-}, []);
+}, [id]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -414,9 +447,7 @@ useEffect(() => {
     setError("");
 
 try {
-  const merchantId = localStorage.getItem(
-    "onboardingMerchantId"
-  );
+ const merchantId = id;
 
   if (!merchantId) {
     setError(
